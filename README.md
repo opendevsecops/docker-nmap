@@ -12,3 +12,11 @@ This container is built automatically by Docker Hub. Simply pull to get latest b
 ```sh
 docker pull opendevsecops/nmap
 ```
+
+## Vulners
+
+This docker container comes with [vulners](https://github.com/vulnersCom/nmap-vulners) nse script builtin. Here is an example how to use it:
+
+```sh
+docker run -it opendevsecops/nmap -sV --script vulners.nse target
+```
