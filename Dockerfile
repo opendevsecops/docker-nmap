@@ -23,6 +23,9 @@ RUN true \
     && apk --no-cache add nmap
 
 COPY --from=build /build/vulners.nse /usr/local/share/nmap/scripts/vulners.nse
+
 COPY --from=launcher /bin/launcher /bin/launcher
 
-ENTRYPOINT ["/bin/launcher", "/usr/bin/nmap"]
+WORKDIR /session
+
+ENTRYPOINT ["/bin/launcher", "nmap"]

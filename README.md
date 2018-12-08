@@ -18,5 +18,5 @@ docker pull opendevsecops/nmap
 This docker container comes with [vulners](https://github.com/vulnersCom/nmap-vulners) nse script builtin. Here is an example how to use it:
 
 ```sh
-docker run -it opendevsecops/nmap -sV --script vulners.nse target
+docker run -it opendevsecops/nmap -sV --script /run/vulners.nse target
 ```
